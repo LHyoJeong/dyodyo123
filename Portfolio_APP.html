@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Portfolio APP</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+	<style type="text/css">
+		
+
+		body{
+		  margin: 0;
+		  padding: 0;
+		  box-sizing: border-box;
+		  font-family: 'Cairo', sans-serif;
+		  background-color: #fcfcfc
+		  
+		}
+/*네비게이션바*/
+		nav{
+			 width:100%;
+			 z-index: 1;
+			 position: absolute;
+			 top: 0px;
+		}
+		#navbar{
+		  background-color: rgba(255, 255, 255, 0.4);
+		  box-shadow: 0px 1px 8px rgba(0,0,0,0.2);
+		  
+		  height: 50px;
+		}
+
+		#logo{
+			text-decoration: none;
+			font-size: 23px;
+			font-weight: 700;
+			color: #494949;
+		}
+
+		#menu {
+		  list-style: none;
+		  float: right;
+		  margin: 0;
+		  padding: 0;
+		}
+
+		#menu li {
+		  float: left;
+		  margin-right: 30px;
+		}
+
+		#menu li a{
+		  text-decoration: none;
+		  color: #494949;
+		  font-size: 15px;
+		  line-height: 50px;
+		  font-weight: 600;
+		  opacity: 0.7;
+		}
+
+		#menu li a:hover{
+			opacity: 1;
+			
+		}
+
+		#logo {
+		  float: left;
+		  line-height : 50px;
+		  margin-left: 25px;
+		}
+
+		#img_logo{
+		  vertical-align: middle;
+		}
+
+		.fix {
+  			position:fixed;
+ 			animation: down 0.7s ease
+			}
+
+		@keyframes down {
+		  0%{
+		    transform: translateY(-50px)
+		  }
+		  100%{
+		    transform: translateY(0px)
+		  }
+		}
+/*네비게이션바*/
+
+/*헤더이미지*/
+		.container {
+
+		  height: 50vh;
+		  background-size: cover;
+		  background-attachment: fixed;
+		}
+
+		.one {
+		  background-image: url(https://i.postimg.cc/jddcH86w/0111.png);
+		}
+/*헤더이미지*/
+
+/*내용*/
+		.All_contents{
+			margin-top: 150px;
+			text-align: center;
+		}
+		.All_contents a{
+			text-decoration: none;
+		}
+		.header{
+			margin-bottom: 50px;
+		}
+		.header h1{
+			font-size: 28px;
+			font-weight: 400;
+			margin-bottom: 100px;
+		}
+		.choice{
+			margin-bottom: 70px;
+		}
+		.choice a{
+			font-size: 18px;
+			margin-left: 100px;
+			margin-right: 100px;
+			color: #494949;
+			/*font-weight: 300;*/
+		}
+	/*이미지리스트*/
+		.list a{
+			display: inline-block; /*기본간격3px*/
+			margin-bottom: 50px;
+			margin-left: 1px;
+			margin-right: 1px;
+		}
+		.list img{
+			box-shadow: 0px 1px 5px rgba(0,0,0,0.2);
+		}
+		.app{
+			font-weight: 400;
+			border-bottom: solid 1px  #494949;
+		}
+		.Graphic{
+			font-weight: 300;
+			opacity: 0.7;
+		}
+		.Graphic:hover{
+			opacity: 1;
+			border-bottom: solid 1px #494949;
+			font-weight: 400;
+		}
+
+		.name{
+			margin: 5px;
+			color: #494949;
+			font-weight: 300;
+			font-size: 17px;
+		}
+		.list :hover .image{
+			opacity: 0.7;
+		}
+	/*이미지리스트*/
+/*내용*/
+
+
+/*푸터*/
+		  .footer {
+		  margin-top: 150px;
+		  /*margin: 0;*/
+		  display: grid;
+		  grid-template-rows: auto 1fr auto;
+		  font-size: 14px;
+		  align-items: start;
+		  display: flex;
+		  flex-flow: row wrap;
+		  padding: 30px 30px 20px 30px;
+		  color: #2f2f2f;
+		  background-color: #ffffff;
+		  border-top: 1px solid #e5e5e5;
+		}
+
+		.footer > * {
+		  flex:  1 100%;
+		}
+
+		.footer__addr {
+		  margin-right: 1.25em;
+		  margin-bottom: 2em;
+		}
+
+		.footer__logo {
+		 
+		  font-weight: 700;
+		 color: #494949;
+		  font-size: 23px;
+		}
+
+		.footer__addr h2 {
+		  margin-top: 1.3em;
+		  font-size: 15px;
+		  font-weight: 700;
+		  
+		}
+
+		.nav__title {
+		  font-weight: 400;
+		  font-size: 15px;
+		}
+
+		.footer address {
+		  font-style: normal;
+		  color: #999;
+		}
+
+		
+
+		.footer ul {
+		  list-style: none;
+		  padding-left: 0;
+		}
+
+		.footer li {
+		  line-height: 2em;
+		}
+
+		.footer a {
+		  text-decoration: none;
+		}
+
+		.footer__nav {
+		  display: flex;
+			flex-flow: row wrap;
+		}
+
+		.footer__nav > * {
+		  flex: 1 50%;
+		  margin-right: 1.25em;
+		}
+
+		.nav__ul a {
+		  color: #999999;
+		}
+		.nav__ul p {
+		  color: #999999;
+		}
+
+		.nav__ul--extra {
+		  column-count: 1;
+
+		}
+
+		.legal {
+		  display: flex;
+		  flex-wrap: wrap;
+		  color: #999999;
+		}
+		  
+		.legal__links {
+		  display: flex;
+		  align-items: center;
+		}
+
+
+
+		@media screen and (min-width: 24.375em) {
+		  .legal .legal__links {
+		    margin-left: auto;
+		  }
+		}
+
+		@media screen and (min-width: 40.375em) {
+		  .footer__nav > * {
+		    flex: 1;
+		  }
+		  
+		  .nav__item--extra {
+		    flex-grow: 1;
+		  }
+		  
+		  .footer__addr {
+		    flex: 10px;
+		  }
+		  
+		  .footer__nav {
+		    flex: 20px;
+		  }
+		}
+/*푸터*/
+		
+
+	</style>
+</head>
+
+<body>
+
+<!-- 네비게이션바 -->
+		<nav><div id="navbar">
+		    <a id="logo" href="Home.html"> <!-- 로고 바꿔야함 -->
+		      HYOJEONG
+		    </a>
+		    <ul id="menu">
+		      <li><a href="Home.html">Home</a></li>
+		     <li><a href="Portfolio_3D.html">Portfolio</a></li>
+		      <li><a href="#">About</a></li>
+		      <li><a href="#">Contact</a></li>
+		    </ul>
+		</div></nav>
+ <!-- 네비게이션바 -->
+
+
+
+
+<section class="All_contents">
+	 <section class="header">
+	 	<h1>PORTFOLIO</h1>
+	 	<div class="choice">
+	 		
+	 		<a class="Graphic" href="Portfolio_3D.html">3D Graphic</a>
+	 		<a class="app" href="Portfolio_APP.html">Application & Service</a>
+	 	</div>
+	 </section>
+
+	 <section>
+	 	<div class="list">
+		 	<a href="#" class="product">
+			<img src="https://i.postimg.cc/KcW7K4tc/2.png" width="536px" class="image">
+			<div class="name">Ding, Dong, Dang</div>
+			</a>
+
+			<a href="#" class="product">
+			<img src="https://i.postimg.cc/WbXv6Lb4/image.png" width="536px" class="image">
+			<div class="name">EDUPICK</div>
+			</a>
+
+			
+
+			
+		</div>
+	 </section>
+</section>
+
+
+<!-- 푸터 -->
+<footer class="footer">
+  <div class="footer__addr">
+    <h1 class="footer__logo">HYOJEONG</h1>
+  </div>
+  
+  <ul class="footer__nav">
+    <li class="nav__item">
+      <h2 class="nav__title">HOME</h2></li>
+
+
+    <li class="nav__item nav__item--extra">
+      <h2 class="nav__title">PORTFOLIO</h2>
+      
+      <ul class="nav__ul nav__ul--extra">
+	        <li>
+	          <a href="Portfolio_3D.html">3D Graphic Design</a>
+	        </li>
+	        
+	        <li>
+	          <a href="Portfolio_APP.html">App Design</a>
+	        </li>   
+      </ul>
+    </li>
+    
+
+    <li class="nav__item">
+      <h2 class="nav__title">ABOUT</h2>
+      
+      <ul class="nav__ul">
+	        <li>
+	          <a href="#">Profile</a>
+	        </li>
+	        
+	        <li>
+	          <a href="#">Terms of Use</a>
+	        </li>
+	        
+	        <li>
+	          <a href="#">Sitemap</a>
+	        </li>
+      </ul>
+    </li>
+      
+      <li class="nav__item">
+      <h2 class="nav__title">CONTACT</h2>
+      
+      <ul class="nav__ul">
+	        <li>
+	          <p>lee980112@naver.com</p>
+	        </li>
+	        
+      </ul>
+    </li>
+  </ul>
+  
+  <div class="legal">
+    <p>&copy; 2020 HYOJEONG. All rights reserved.</p>
+    
+    
+  </div>
+</footer>
+	
+<!-- 푸터 -->
+
+
+<!-- 네비게이션 자바스크립트 -->
+<script>
+
+	function navigo (){
+    const header = document.querySelector('header');
+    const headerheight = header.clientHeight;
+    document.addEventListener('scroll', onScroll, { passive: true });
+    function onScroll () {
+    const scrollposition = pageYOffset;
+    const nav = document.querySelector('nav');
+   if (headerheight<=scrollposition){
+     nav.classList.add('fix')
+   }
+   else {
+     nav.classList.remove('fix');
+   }
+ } 
+  
+}
+navigo()
+</script>
+<!-- 네비게이션 자바스크립트 -->
+
+</body>
+
+</html>
